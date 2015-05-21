@@ -1,0 +1,17 @@
+{
+  "name": "budgetarity",
+  "version": "0.0.1",
+  "homepage": "https://github.com/marcantony/budgetarity",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/lib",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.4",
+    "angular": "~1.3.15"
+  }
+}
