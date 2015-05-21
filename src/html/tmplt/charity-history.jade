@@ -1,4 +1,4 @@
 .panel.panel-default
     .panel-body
-        h2(ng-bind="charity.name")
+        h2.charity-history(ng-cloak) {{ charity.name }}
             .small(ng-cloak) {{ charity.amount | currency }}
