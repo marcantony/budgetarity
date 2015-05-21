@@ -5,32 +5,10 @@ angular.module('main', ['ngRoute'])
             controller: 'LandingCtrl'
         })
     })
-    .controller('LandingCtrl', function ($scope) {
-        $scope.name = 'Jim';
-        $scope.budgetLeft = 35;
-
-        $scope.charities = [
-            {
-                name: 'Red Cross',
-                amount: 50
-            },
-            {
-                name: 'Red Cross',
-                amount: 50
-            },
-            {
-                name: 'Red Cross',
-                amount: 50
-            },
-            {
-                name: 'Red Cross',
-                amount: 50
-            },
-            {
-                name: 'Red Cross',
-                amount: 50
-            }
-        ];
+    .controller('LandingCtrl', function ($scope, UserService) {
+        $scope.name = UserService.getName();
+        $scope.budgetLeft = UserService.getBudgetLeft();
+        $scope.charities = UserService.getCharities();
     })
     .directive('charityHistory', function () {
         return {
