@@ -1,4 +1,7 @@
-angular.module('app', [])
+angular.module('app', ['ngRoute'])
+    .config(function ($locationProvider) {
+        $locationProvider.html5Mode(true);
+    })
     .controller('MainCtrl', function () {
 
     })
