@@ -1,3 +1,11 @@
 .charity-history {
     margin-top: 10px;
 }
+
+.hidden {
+	display: none;
+}
+
+.panelcheckbox:checked ~.panel-default {
+	border: 10px solid tomato;
+}

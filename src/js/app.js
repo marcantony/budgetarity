@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute', 'main'])
+angular.module('app', ['ngRoute', 'main', 'charity'])
     .config(function ($locationProvider) {
         $locationProvider.html5Mode(true);
     })
