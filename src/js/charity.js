@@ -8,7 +8,7 @@ angular.module('charity', ['ngRoute'])
 	.controller('CharitiesCtrl', function ($scope, UserService) {
 		$scope.charities = UserService.getCharities();
 	})
-	.directive('charityButton', function () {
+	.directive('charityButton', function (UserService) {
 		return {
 			templateUrl: "/html/tmplt/charity-button.html",
 			scope: {
@@ -21,6 +21,7 @@ angular.module('charity', ['ngRoute'])
 						scope.charities[i].isSelected = false
 					};
 			        scope.charity.isSelected = true;
+			        UserService.updateCharities(scope.charities);
 				};
 			}
 		};

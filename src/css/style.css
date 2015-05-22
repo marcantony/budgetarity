@@ -19,10 +19,29 @@ body{
 	background: url('img/ps_neutral.png') repeat;
 }
 
+.jumbotron {
+	background: url('img/ps_neutral.png') repeat;
+}
+
 .jumbotron > h3 {
 	font-family: 'Bree Serif', serif;
 }
 
 .jumbotron > h1 {
 	font-family: 'Merriweather Sans', sans-serif;
+}
+
+.navbar a {
+    color: black !important;
+    font-family: 'Bree Serif', serif;
+}
+
+.row{
+	font-family: 'Bree Serif', serif;
+	font-size: 21px
+}
+
+.header-img {
+    max-height: 50px;
+    margin-top: -15px;
 }
