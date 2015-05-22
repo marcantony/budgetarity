@@ -7,7 +7,9 @@ angular.module('main', ['ngRoute'])
     })
     .controller('LandingCtrl', function ($scope, UserService) {
         $scope.name = UserService.getName();
-        $scope.budgetLeft = UserService.getBudgetLeft();
+        UserService.getBudgetLeft().then(function (data) {
+            $scope.budgetLeft = data;
+        })
         $scope.charities = UserService.getCharities();
     })
     .directive('charityHistory', function () {
