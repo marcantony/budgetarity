@@ -2,6 +2,11 @@ angular.module('app', ['ngRoute', 'main', 'charity'])
     .config(function ($locationProvider) {
         $locationProvider.html5Mode(true);
     })
+    .run(function () {
+    	Parse.initialize("7as8XJVDNefTa0cXQTMR5nuS6dhwQaKMHnhFgpqr", "IivItsZKeVAEXLdIUt0lpeKyPgHnScseejaAH7Hu");
+    	var Charities = Parse.Object.extend("CharityDetails");
+        var charities = new Charities();
+    })
     .controller('MainCtrl', function () {
 
     })
@@ -13,7 +18,7 @@ angular.module('app', ['ngRoute', 'main', 'charity'])
             getBudgetLeft: function () {
                 return 35;
             },
-            getCharities: function () {
+            updateCharities: function () {
                 return [
                     {
                         name: 'Red Cross',
@@ -42,8 +47,21 @@ angular.module('app', ['ngRoute', 'main', 'charity'])
                     }
                 ];
             },
-            updateCharities: function (charities) {
-                // send charities to back-end
+            getCharities: function (charities) {
+                var query = new Parse.Query(charities);
+                query.find({
+  					success: function(charities) {
+  						var CharityName = charities.get('Name');
+  						var CharityAmount = charities.get('Amount');
+  						console.log("results: " + results);
+  				},
+  					error: function(error) {
+  						console.log("Error: " + error);
+  				}
+
+  				
+  				
+			});
             }
         };
     })
