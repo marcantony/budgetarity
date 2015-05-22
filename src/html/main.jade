@@ -1,8 +1,7 @@
-.page-header
-    h3(ng-cloak) Welcome, {{ name }}!
-
 .jumbotron
+    h3(ng-cloak) Welcome, {{ name }}!
     h1(ng-cloak) Remaining: {{ budgetLeft | currency}}
 
 .row
+    .text-center Donation History
     .col-md-4.text-center(ng-repeat="charity in charities", charity-history, charity="charity")

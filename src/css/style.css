@@ -10,3 +10,19 @@
 	color: black !important;
 	background-color: #62FF62 !important;
 }
+
+.navbar {
+	background-color: #ffdf00 !important;
+}
+
+body{
+	background: url('img/ps_neutral.png') repeat;
+}
+
+.jumbotron > h3 {
+	font-family: 'Bree Serif', serif;
+}
+
+.jumbotron > h1 {
+	font-family: 'Merriweather Sans', sans-serif;
+}
