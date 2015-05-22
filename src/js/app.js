@@ -3,8 +3,8 @@ angular.module('app', ['ngRoute', 'main', 'charity'])
         $locationProvider.html5Mode(true);
     })
     .run(function () {
-    	Parse.initialize("7as8XJVDNefTa0cXQTMR5nuS6dhwQaKMHnhFgpqr", "IivItsZKeVAEXLdIUt0lpeKyPgHnScseejaAH7Hu");
-    	var Charities = Parse.Object.extend("CharityDetails");
+        Parse.initialize("7as8XJVDNefTa0cXQTMR5nuS6dhwQaKMHnhFgpqr", "IivItsZKeVAEXLdIUt0lpeKyPgHnScseejaAH7Hu");
+        var Charities = Parse.Object.extend("CharityDetails");
         var charities = new Charities();
     })
     .controller('MainCtrl', function () {
