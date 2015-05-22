@@ -12,11 +12,15 @@ angular.module('charity', ['ngRoute'])
 		return {
 			templateUrl: "/html/tmplt/charity-button.html",
 			scope: {
+				charities: '=charities',
 				charity: '=charity'
 			},
 			link: function (scope) {
 				scope.onClick = function () {
-			        scope.charity.isSelected = !scope.charity.isSelected;
+					for (var i = 0; i < scope.charities.length; i++) {
+						scope.charities[i].isSelected = false
+					};
+			        scope.charity.isSelected = true;
 				};
 			}
 		};
