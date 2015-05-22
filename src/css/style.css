@@ -6,6 +6,7 @@
 	display: none;
 }
 
-.panelcheckbox:checked ~.panel-default {
-	border: 10px solid tomato;
+.charity-checked {
+	color: black !important;
+	background-color: #62FF62 !important;
 }

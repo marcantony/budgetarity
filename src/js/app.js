@@ -17,23 +17,28 @@ angular.module('app', ['ngRoute', 'main', 'charity'])
                 return [
                     {
                         name: 'Red Cross',
-                        amount: 50
+                        amount: 50,
+                        isSelected: true
                     },
                     {
                         name: 'Red Cross',
-                        amount: 50
+                        amount: 50,
+                        isSelected: false
                     },
                     {
                         name: 'Red Cross',
-                        amount: 50
+                        amount: 50,
+                        isSelected: false
                     },
                     {
                         name: 'Red Cross',
-                        amount: 50
+                        amount: 50,
+                        isSelected: true
                     },
                     {
                         name: 'Red Cross',
-                        amount: 50
+                        amount: 50,
+                        isSelected: false
                     }
                 ];
             },
